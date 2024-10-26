@@ -8,7 +8,8 @@ public record SensorData(long seqNumber, long patientId, int value, long timesta
 		JSONObject jsonObj = new JSONObject(json);
 		return new SensorData(jsonObj.getLong("seqNumber"),
 				jsonObj.getLong("patientId"),
-				jsonObj.getInt("value"), jsonObj.getLong("timestamp"));
+				jsonObj.getInt("value"), 
+				jsonObj.getLong("timestamp"));
 	}
 	@Override
 	public String toString() {
